@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Digital Library</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #07162f, #142f61, #102e60);
+    color: white;
+}
+
+/* Navbar */
+
+header {
+    background: #06142f;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #12649a;
+}
+
+.logo {
+    color: #00e5ff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 9px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    background: #087ef5;
+}
+
+.logout {
+    background: #ed2670;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 35px 0;
+}
+
+/* Hero Section */
+
+.hero {
+    background: rgba(36, 75, 130, 0.48);
+    border: 1px solid #32639b;
+    border-radius: 25px;
+    padding: 55px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.tag {
+    display: inline-block;
+    color: #00e5ff;
+    border: 1px solid #008cba;
+    background: rgba(0, 220, 255, 0.08);
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #00e5ff;
+}
+
+.hero p {
+    color: #d0e1ff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 16px 24px;
+    background: linear-gradient(90deg, #00d9ff, #087ef5);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px #087ef5;
+}
+
+.hero-card {
+    background: linear-gradient(135deg, #087ef5, #5124b7);
+    border-radius: 22px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #668bff;
+    padding: 25px;
+}
+
+.hero-card .book-icon {
+    font-size: 75px;
+    margin-bottom: 30px;
+}
+
+.hero-card h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.hero-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Section Heading */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.section-heading span {
+    color: #00e5ff;
+}
+
+.section-heading p {
+    color: #b9d1f5;
+    line-height: 1.6;
+}
+
+/* Feature Cards */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid #315d91;
+    border-radius: 20px;
+    padding: 28px 20px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #00e5ff;
+    box-shadow: 0 8px 25px rgba(0,220,255,0.15);
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #087ef5, #5625c7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+.feature-card h3 {
+    font-size: 19px;
+    margin-bottom: 13px;
+}
+
+.feature-card p {
+    color: #c4d7f7;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 95px;
+}
+
+.feature-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 15px;
+    border-radius: 9px;
+    background: #087ef5;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.feature-card a:hover {
+    background: #00bfe9;
+}
+
+/* Statistics */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.stat {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid #315d91;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.stat h2 {
+    color: #00e5ff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    color: #c8d9f5;
+    font-size: 14px;
+}
+
+/* About Bottom */
+
+.bottom-section {
+    background: linear-gradient(120deg, #087ef5, #4725a8);
+    padding: 40px;
+    border-radius: 22px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bottom-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.bottom-section p {
+    color: #e2ecff;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.bottom-section a {
+    display: inline-block;
+    background: white;
+    color: #0757b9;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background: #06142f;
+    padding: 25px;
+    text-align: center;
+    color: #a9c4ed;
+    border-top: 1px solid #315d91;
+}
+
+footer span {
+    color: #00e5ff;
+}
+
+/* Responsive */
+
+@media(max-width: 1000px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 650px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-card {
+        min-height: 230px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .bottom-section {
+        padding: 25px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">📚 Digital Library</div>
+
+    <nav>
+        <a href="../dashboard.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="issue-book.html">Issue Book</a>
+        <a href="return-book.html">Return Book</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html" class="active">About</a>
+        <a href="../login.html" class="logout">Logout</a>
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="tag">SMART • SIMPLE • DIGITAL</div>
+
+            <h1>
+                About Our <span>Digital Library</span>
+            </h1>
+
+            <p>
+                Welcome to our Digital Library Management System.
+                This application makes it easier to organize books,
+                manage members, issue books, and track returns
+                in one convenient place.
+            </p>
+
+            <a href="../dashboard.html" class="hero-btn">
+                Explore Dashboard →
+            </a>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="book-icon">📚</div>
+
+            <h2>Knowledge for Everyone</h2>
+
+            <p>Your library, organized digitally.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- What We Offer -->
+
+    <section>
+
+        <div class="section-heading">
+
+            <h2>What <span>We Offer</span></h2>
+
+            <p>
+                Manage your complete library activities
+                using our digital management system.
+            </p>
+
+        </div>
+
+        <div class="features">
+
+            <!-- Book Management -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📚</div>
+
+                <h3>Book Management</h3>
+
+                <p>
+                    Add new books, update book details,
+                    manage book quantities and view
+                    all available books easily.
+                </p>
+
+                <a href="books.html">Manage Books →</a>
+
+            </div>
+
+            <!-- Member Management -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">👥</div>
+
+                <h3>Member Management</h3>
+
+                <p>
+                    Register new members, maintain
+                    member details and manage
+                    student information easily.
+                </p>
+
+                <a href="members.html">Manage Members →</a>
+
+            </div>
+
+            <!-- Issue Management -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📖</div>
+
+                <h3>Issue Book</h3>
+
+                <p>
+                    Issue books to registered members,
+                    maintain issue dates and
+                    track issued book records.
+                </p>
+
+                <a href="issue-book.html">Issue Books →</a>
+
+            </div>
+
+            <!-- Return Management -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">↩️</div>
+
+                <h3>Return Book</h3>
+
+                <p>
+                    Manage returned books, update
+                    availability and maintain
+                    return history.
+                </p>
+
+                <a href="return-book.html">Return Books →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Library Statistics -->
+
+    <section>
+
+        <div class="section-heading">
+
+            <h2>Library <span>Overview</span></h2>
+
+            <p>Our library management system at a glance.</p>
+
+        </div>
+
+        <div class="statistics">
+
+            <div class="stat">
+                <h2 id="totalBooks">0</h2>
+                <p>Total Books</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="totalMembers">0</h2>
+                <p>Total Members</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="totalIssued">0</h2>
+                <p>Books Issued</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="totalReturned">0</h2>
+                <p>Books Returned</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Bottom Section -->
+
+    <section class="bottom-section">
+
+        <h2>Start Managing Your Library Today!</h2>
+
+        <p>
+            Explore our digital library system and make
+            your library activities simple, fast and efficient.
+        </p>
+
+        <a href="../dashboard.html">
+            Go To Dashboard →
+        </a>
+
+    </section>
+
+</div>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        © 2026 <span>Digital Library Management System</span>.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+// Load Library Statistics
+
+function loadLibraryStatistics() {
+
+    let books = JSON.parse(localStorage.getItem("books")) || [];
+
+    let members = JSON.parse(localStorage.getItem("members")) || [];
+
+    let issued = JSON.parse(localStorage.getItem("issuedBooks")) || [];
+
+    let returned = JSON.parse(localStorage.getItem("returnedBooks")) || [];
+
+    let totalQuantity = books.reduce(function(total, book) {
+        return total + (Number(book.quantity) || 0);
+    }, 0);
+
+    document.getElementById("totalBooks").textContent =
+        totalQuantity;
+
+    document.getElementById("totalMembers").textContent =
+        members.length;
+
+    document.getElementById("totalIssued").textContent =
+        issued.length;
+
+    document.getElementById("totalReturned").textContent =
+        returned.length;
+
+}
+
+document.addEventListener("DOMContentLoaded", loadLibraryStatistics);
+
+</script>
+
+</body>
+</html>
