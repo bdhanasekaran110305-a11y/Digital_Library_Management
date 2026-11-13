@@ -1,100 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register</title>
 
-<style>
+    <meta charset="UTF-8">
 
-body{
-    font-family:Arial,sans-serif;
-    background:#e3f2fd;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-.container{
-    width:400px;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px gray;
-}
+    <title>Library Management System</title>
 
-h2{
-    text-align:center;
-    color:blue;
-}
-
-label{
-    font-weight:bold;
-}
-
-input,textarea{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    margin-bottom:15px;
-    border:1px solid gray;
-    border-radius:5px;
-}
-
-button{
-    width:100%;
-    padding:10px;
-    background:blue;
-    color:white;
-    border:none;
-    border-radius:5px;
-    font-size:16px;
-}
-
-button:hover{
-    background:darkblue;
-}
-
-</style>
+    <link rel="stylesheet" href="./WEEK ONE/css/ind.css">
 
 </head>
+
 <body>
 
-<div class="container">
+    <header class="header">
 
-<h2>Admin Register</h2>
+        <div class="logo">
+            📚 Library Management System
+        </div>
 
-<form action="login.html">
+    </header>
 
-<label>User Name</label>
-<input type="text" placeholder="Enter User Name" required>
 
-<label>User Email</label>
-<input type="email" placeholder="Enter User Email" required>
+    <main class="main-container">
 
-<label>User Phone Number</label>
-<input type="tel" placeholder="Enter Phone Number" required>
+        <section class="welcome-box">
 
-<label>User Address</label>
-<textarea rows="3" placeholder="Enter Address"></textarea>
+            <div class="image-container">
 
-<label>User Password</label>
-<input type="password" placeholder="Enter Password" required>
+                <img
+                    src="./WEEK ONE/assets/image1.jpg"
+                    alt="Library Image"
+                >
 
-<label>User Role</label>
-<input type="text" value="Admin" readonly>
+            </div>
 
-<button type="submit">Register</button>
 
-</form>
+            <div class="welcome-content">
 
-<p align="center">
-Already have an account?
-<a href="login.html">Login</a>
-</p>
+                <p class="small-title">
+                    WELCOME TO OUR LIBRARY
+                </p>
 
-</div>
+                <h1>
+                    Discover a World
+                    <br>
+                    of Knowledge
+                </h1>
+
+                <p class="description">
+                    Our Library Management System helps students
+                    easily access books, manage library resources,
+                    and find the books they need.
+                </p>
+
+                <p class="description">
+                    Explore our library system and enjoy a simple,
+                    fast, and user-friendly experience.
+                </p>
+
+                <a href="./WEEK ONE/page/login.html" class="get-started">
+                    Get Started
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            &copy; 2026 Library Management System
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
